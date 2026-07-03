@@ -1,19 +1,26 @@
-import { MapPin, Search, Bell, ShoppingCart, User } from "lucide-react";
+import { MapPin, Search, Bell, ShoppingCart, User, Menu } from "lucide-react";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <div className="flex items-center justify-between px-4 py-3 md:px-6">
-        {/* Mobile: Location & Profile/Cart | Desktop: Logo & Location */}
-        <div className="flex items-center gap-2 flex-1 md:flex-none">
-          <MapPin className="w-5 h-5 text-brand-primary" />
-          <div className="flex flex-col">
-            <span className="text-xs text-gray-500 font-medium leading-none">Delivering to</span>
-            <span className="text-sm font-semibold truncate max-w-[150px] md:max-w-xs text-brand-primary">Mohakhali, Dhaka</span>
-          </div>
+        
+        {/* Mobile: Menu | Desktop: Logo/Menu */}
+        <div className="flex items-center gap-3">
+          <button className="md:hidden p-1.5 text-gray-600 hover:bg-gray-100 rounded-lg">
+            <Menu className="w-6 h-6" />
+          </button>
+          <Link href="/" className="flex items-center gap-2">
+            <MapPin className="hidden md:block w-5 h-5 text-brand-primary" />
+            <div className="flex flex-col">
+              <span className="text-[10px] md:text-xs text-gray-500 font-medium leading-none">Delivering to</span>
+              <span className="text-sm font-semibold truncate max-w-[130px] md:max-w-xs text-brand-primary">Mohakhali, Dhaka</span>
+            </div>
+          </Link>
         </div>
 
-        {/* Search Bar - hidden on very small screens, visible on md */}
+        {/* Search Bar - hidden on mobile, visible on md */}
         <div className="hidden md:flex flex-1 max-w-xl mx-6">
           <div className="relative w-full">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -25,18 +32,18 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Actions */}
-        <div className="flex items-center gap-4">
+        {/* Actions (Always visible for Cart and Profile) */}
+        <div className="flex items-center gap-1 md:gap-4">
           <button className="hidden md:block p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors">
             <Bell className="w-5 h-5" />
           </button>
-          <button className="relative p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors">
-            <ShoppingCart className="w-5 h-5" />
+          <Link href="/cart" className="relative p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors">
+            <ShoppingCart className="w-6 h-6 md:w-5 md:h-5" />
             <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white"></span>
-          </button>
-          <button className="hidden md:block p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors">
-            <User className="w-5 h-5" />
-          </button>
+          </Link>
+          <Link href="/profile" className="p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors">
+            <User className="w-6 h-6 md:w-5 md:h-5" />
+          </Link>
         </div>
       </div>
       

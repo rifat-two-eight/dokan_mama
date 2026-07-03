@@ -1,23 +1,36 @@
+"use client";
+
 import { ShoppingCart, Pill, Utensils, Heart, Ticket, HelpCircle, LogOut } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
+  const pathname = usePathname();
+
+  const getCategoryClass = (path: string) => {
+    const isActive = pathname === path;
+    return `flex items-center gap-3 px-3 py-2.5 font-medium rounded-lg transition-colors ${
+      isActive ? "bg-brand-primary/10 text-brand-primary" : "text-gray-600 hover:bg-gray-100"
+    }`;
+  };
+
   return (
     <aside className="hidden md:flex flex-col w-64 h-[calc(100vh-65px)] sticky top-[65px] bg-white border-r border-gray-200 overflow-y-auto overflow-x-hidden p-4 custom-scrollbar">
       <div className="mb-6">
         <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Categories</h3>
         <nav className="space-y-1">
-          <a href="#" className="flex items-center gap-3 px-3 py-2.5 bg-brand-primary/10 text-brand-primary font-medium rounded-lg transition-colors">
+          <Link href="/" className={getCategoryClass("/")}>
             <ShoppingCart className="w-5 h-5" />
             Normal Store
-          </a>
-          <a href="#" className="flex items-center gap-3 px-3 py-2.5 text-gray-600 hover:bg-gray-100 font-medium rounded-lg transition-colors">
+          </Link>
+          <Link href="/pharmacy" className={getCategoryClass("/pharmacy")}>
             <Pill className="w-5 h-5" />
             Pharmacy
-          </a>
-          <a href="#" className="flex items-center gap-3 px-3 py-2.5 text-gray-600 hover:bg-gray-100 font-medium rounded-lg transition-colors">
+          </Link>
+          <Link href="/restaurant" className={getCategoryClass("/restaurant")}>
             <Utensils className="w-5 h-5" />
             Restaurant
-          </a>
+          </Link>
         </nav>
       </div>
 

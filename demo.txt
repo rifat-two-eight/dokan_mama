@@ -1,763 +1,400 @@
-১. Project Overview
+২৫. Order History Module
+Overview
 
-এটি একটি Location-Based Marketplace Platform, যেখানে ব্যবহারকারী তার বর্তমান লোকেশন অনুযায়ী আশেপাশের Normal Store, Pharmacy এবং Restaurant দেখতে, প্রোডাক্ট ব্রাউজ করতে এবং অর্ডার করতে পারবে।
+Order History Module-এর মাধ্যমে ব্যবহারকারী তার সকল অর্ডার দেখতে, সার্চ করতে, ফিল্টার করতে, ট্র্যাক করতে এবং প্রতিটি অর্ডারের বিস্তারিত তথ্য দেখতে পারবে। এছাড়াও নির্দিষ্ট শর্ত পূরণ হলে Delivery Method পরিবর্তন, Change Request এবং Order Tracking-এর মতো ফিচার ব্যবহার করতে পারবে।
 
-সিস্টেমের মূল উদ্দেশ্য হলো—
+এই মডিউল মূলত দুইটি পেজ নিয়ে গঠিত:
 
-Nearest Store Discover করা
-দ্রুত Product Search করা
-Store ও Product View এর মধ্যে সহজে Switch করা
-বিভিন্ন Delivery Option প্রদান করা
-Location অনুযায়ী Offer ও Bundle দেখানো
-২. Website Layout Structure
+Order History Page (Order List)
+Order Details Page (View Order)
+১. Order History Page
+উদ্দেশ্য
 
-ওয়েবসাইটের Layout নিচের ক্রম অনুযায়ী হবে।
+এই পেজে ব্যবহারকারীর সকল অর্ডার একটি Card/List আকারে প্রদর্শিত হবে। ব্যবহারকারী এখান থেকে অর্ডার সার্চ, ফিল্টার, ট্র্যাক এবং বিস্তারিত দেখতে পারবে।
 
------------------------------------------------------
-Top Header
------------------------------------------------------
-Sidebar
------------------------------------------------------
-Hero Slider
------------------------------------------------------
-Main Tab
-    Normal Store | Pharmacy | Restaurant
------------------------------------------------------
-Selected Section Content
------------------------------------------------------
-Offer Section
------------------------------------------------------
-Nearest Store Section
------------------------------------------------------
-Footer
-৩. Sidebar (Left Navigation)
+Page Layout
+--------------------------------------------------
+Search Bar        Scan Order      Filter
+--------------------------------------------------
 
-Sidebar পুরো Website-এর Primary Navigation হবে।
+All | Running | In Progress | Delivered
+(Horizontal Scrollable Tabs)
 
-Sidebar Menu
-Shop Category
+--------------------------------------------------
 
-এখানে তিনটি Parent Category থাকবে।
+Order Card
 
-Shop Category
+Order Card
 
-▼ Normal Store
+Order Card
 
-▼ Pharmacy
-
-▼ Restaurant
-যদি Normal Store Expand করা হয়
-Normal Store
-
-• Grocery
-• Fruits
-• Vegetables
-• Stationery
-• Electronics
-• Gadgets
-• Fashion
-• Cosmetics
-• Multipurpose Store
-• Pet Shop
-• Gift Shop
-• Hardware
-Pharmacy Expand করলে
-Pharmacy
-
-• Medicine
-
-• Baby Care
-
-• Personal Care
-
-• Health Care
-
-• Medical Equipment
-
-• Perfume
-
-• Winter Care
-
-• Diabetic Care
-
-• Vitamins
-Restaurant Expand করলে
-Restaurant
-
-• Fast Food
-
-• Chinese
-
-• Cafe
-
-• Fine Dining
-
-• Cloud Kitchen
-
-• Cart & Van
-
-• Bakery
-
-• Dessert
-
-• Juice Bar
-Product Category
-
-Shop Category এর নিচে থাকবে Product Category।
-
-এখানে Multi-level Category থাকবে।
-
-উদাহরণ
-
-Product Category
-
-▼ Grocery
-
-Rice
-
-Oil
-
-Salt
-
-Milk
-
-Beverages
-
-▼ Electronics
-
-Phone
-
-Laptop
-
-Earbuds
-
-Smart Watch
-
-▼ Medicine
-
-Tablet
-
-Capsule
-
-Syrup
-
-Injection
-
-▼ Food
-
-Burger
-
-Pizza
-
-Chicken
-
-Coffee
-
-যে Category-তে ক্লিক করবে, সরাসরি সেই Category Page Open হবে।
-
-Additional Sidebar Menu
-
-এরপর থাকবে
-
-Favourite Shops
-Favourite Products
-Cart
-Bundle Offers
-Flash Offers
-Coupons
-Contact Support
-Language Switch (বাংলা / English)
-Profile Section
-
-যদি User Login করে থাকে
-
-তাহলে Sidebar এ থাকবে
-
-Profile
-Delivery Address
-Saved Address
-Order History
-Payment Methods
-Wishlist
-Notifications
-Logout
-
-যদি Login না করে থাকে
-
-তাহলে
-
-Login
-
-Register
-
-দেখাবে।
-
-৪. Top Header
-
-Header এ থাকবে
-
-Logo
+Order Card
+Top Section
 Search Bar
-Current Location
-Change Location
-Notifications
-Cart
-Login/Profile
-৫. Hero Section
 
-Hero Section পুরো Website-এর প্রথম Visual Area।
+ব্যবহারকারী নিচের তথ্য দিয়ে অর্ডার খুঁজতে পারবে।
 
-এখানে থাকবে
+Order ID
+Store Name
+Product Name (Optional)
+Scan Order
 
-Auto Sliding Banner
+Search Bar-এর পাশে একটি QR/Barcode Scan আইকন থাকবে।
 
-যেখানে দেখানো হবে
+এর মাধ্যমে ব্যবহারকারী
 
-Flash Sale
-Bundle Offer
-Festival Offer
-Free Delivery Campaign
-Nearby Shop Offer
-৬. Main Category Tabs
+Order QR Code Scan
+Invoice QR Scan
+Receipt QR Scan
 
-Hero Slider এর নিচে থাকবে তিনটি বড় Tab
+করেই সরাসরি Order Details Page-এ যেতে পারবে।
 
+Filter Button
+
+Filter-এ ক্লিক করলে একটি Bottom Sheet / Popup খুলবে।
+
+এখানে Filter করা যাবে:
+
+Date Range
+Today
+Yesterday
+Last 7 Days
+Last 30 Days
+Custom Date
+Order Amount
+Lowest Amount
+Highest Amount
+Custom Amount Range
+Delivery Type
+Home Delivery
+Store Pickup
+Payment Method
+Cash on Delivery
+bKash
+Card
+Wallet
+Store Type
 Normal Store
-
 Pharmacy
-
 Restaurant
+Order Status Tabs
 
-Default হিসেবে থাকবে
+Search Section-এর নিচে Horizontal Scrollable Tabs থাকবে।
 
-Normal Store
+All Orders
+Running Orders (New/Active)
+In Progress
+Ready for Pickup
+Out for Delivery
+Delivered
+Cancelled (Optional)
 
-৭. Normal Store Home
+প্রতিটি Tab নির্বাচন করলে শুধুমাত্র সেই Status-এর Order দেখাবে।
 
-Normal Store Select করলে Layout হবে
+Order List Card
 
-Category Section
+প্রতিটি Order একটি Card আকারে থাকবে।
 
-Horizontal Scroll
+Card-এ নিম্নলিখিত তথ্য থাকবে:
 
-Grocery
+Order Image
 
-Fruit
+অর্ডারের প্রথম Product-এর Thumbnail অথবা একটি Order Thumbnail।
 
-Stationery
-
-Electronics
-
-Fashion
-
-Gift Shop
-
-Pet Shop
-
-More...
-Product Category Section
-
-এর নিচে থাকবে
-
-Product Category Grid
-
-Bundle Offer
-
-Nearby Store এর Bundle Product
-
-Flash Offer
-
-Location Based Discount
-
-Browse Nearest Store
-
-Header
-
-Nearest Stores
-
-Browse All →
-
-এখানে Store Card থাকবে।
-
-Card এ থাকবে
-
-Cover Image
-Store Logo
+Order Information
+Order ID
+Order Date & Time
 Store Name
-Rating
-Distance
-Delivery Charge
-Open / Closed
-Favourite Button
-Toggle View
+Total Products
+Total Amount
 
-Browse Section এর উপরে থাকবে
+উদাহরণ:
 
-Store View
+Order ID: #ORD-10235
 
-Product View
+Date: 05 July 2026
 
-যদি Product View করা হয়
+Store:
+Fresh Grocery
 
-তাহলে Nearby Store-এর Product গুলো
+Items:
+8 Products
 
-Random
+Total:
+৳1,560
+Order Status Badge
 
-অথবা
+উদাহরণ:
 
-Category Wise
+New Order
+Confirmed
+Preparing
+Ready for Pickup
+Out for Delivery
+Delivered
+Cancelled
 
-দেখাবে।
+Status অনুযায়ী বিভিন্ন রঙ ব্যবহার করা হবে।
 
-৮. Pharmacy Home
+Action Buttons
+যদি Order Delivered হয়ে যায়
 
-Pharmacy Tab এ গেলে
+শুধুমাত্র থাকবে
 
-Product Category
-Medicine
-Baby Care
-Personal Care
-Winter Care
-Health Care
-Medical Equipment
-Perfume
-Preferred Medicine
+View Details
+যদি Order এখনো Active থাকে
 
-একটি Section
+দুটি Button থাকবে
 
-Select Your Preferred Medicine
-Prescription Upload
+View Details
+Track Order
+Order Details Page
 
-Card থাকবে
+ব্যবহারকারী View Details অথবা Track Order-এ ক্লিক করলে এই পেজে যাবে।
 
-Upload Prescription
+Page Layout
+Order Progress
 
-Need Help?
+↓
 
-Button
+Delivery Action
 
-Call for Assistance
-
-যেখানে Customer Support Call করতে পারবে।
-
-Medicine List
-
-Category Wise Medicine
-
-Browse Nearest Pharmacy
-
-Store List
-
-Filter থাকবে
-
-Nearest
-Top Rated
-Favourite
-Toggle View
-
-Store View
-
-Product View
-
-৯. Restaurant Home
-
-Restaurant Select করলে
-
-Restaurant Type
-
-Horizontal Scroll
-
-Fast Food
-
-Chinese
-
-Cafe
-
-Bakery
-
-Cloud Kitchen
-
-Cart & Van
-
-Fine Dining
-Food Category
-
-Burger
-
-Pizza
-
-Rice
-
-Chicken
-
-Drinks
-
-Coffee
-
-Dessert
-
-Preferred Food
-
-"Select Your Preferred Food"
-
-Discount Food
-
-Discount Product
-
-Category Wise Food
-
-Product Grid
-
-Browse Nearest Restaurant
-
-Restaurant Card
-
-Toggle
-
-Restaurant View
-
-Food View
-
-১০. Browse All Store Page
-
-এটি Full Listing Page
-
-Top এ থাকবে
-
-Search
-
-তার নিচে Filter
-
-Nearest
-
-Top Rated
-
-Free Delivery
-
-Open Now
-
-Offers
-
-Distance
-
-Category
-
-Store Card
-
-দেখাবে
-
-Cover Image
-Favourite
-Store Logo
-Store Name
-Rating
-Review Count
-Location
-Distance
-Delivery Charge
-Free Delivery Tag
-Open / Closed
-১১. Store Details Page
-
-Store Click করলে
-
-Top
-
-Cover Photo
-
-তার নিচে
-
-Logo
-
-Store Name
-
-Rating
-
-Reviews
-
-Distance
-
-Location
-
-Open /Closed
-
-Delivery Charge
-
-Free Delivery
-
-Offer Section
-
-Special Offer
-
-Bundle Offer
-
-Flash Offer
-
-Category List
-
-Category Wise Products
-
-Shopping Button
-
-Shopping Mode
-
-এখানে Click করলে
-
-Quick Shopping Interface
-
-Open হবে।
-
-১২. Shopping Mode
-
-এটি শুধুমাত্র দ্রুত Shopping-এর জন্য।
-
-Layout
-
-Left
-
-Category
-
-Right
-
-Products
-
-Product Card
-
-Add to Cart Button
-
-Quantity Change
-
-Search
-
-১৩. Cart Page
-
-প্রতিটি Store আলাদা Section হিসেবে থাকবে।
-
-Store Card
-
-Logo
-Store Name
-Distance
-Delivery Charge
-
-Products
-
-Image
-
-Name
-
-Price
-
-Quantity
-
-Remove
+↓
 
 Order Summary
 
-Subtotal
+↓
 
-Discount
-
-Coupon
-
-Delivery Charge
-
-Total
-
-Delivery Option
-
-Home Delivery
-Standard Delivery
-Scheduled Delivery
-Emergency / Priority Delivery
-Store Pickup
-Instant Pickup
-Scheduled Pickup
-Standard Pickup
-
-Proceed
-
-১৪. Checkout Flow
-
-যদি Home Delivery হয়
-
-Delivery Method
+Ordered Products
 
 ↓
 
-Select Address
+Payment Summary
 
 ↓
 
-Payment
+Delivery Information
 
 ↓
 
-Review Order
+Change Request
 
 ↓
 
-Place Order
+Support
+১. Order Progress Section
 
-যদি Store Pickup
+পেজের একদম উপরে থাকবে Order Timeline।
 
-Delivery Method
+এটি Step Progress আকারে হবে।
 
-↓
-
-Payment
-
-↓
-
-Place Order
-
-১৫. Payment Page
-
-Payment Method
-
-bKash
-Card
-Cash on Delivery
-Wallet (Optional)
-
-যদি Store Pickup
-
-COD থাকবে না
-
-Direct Place Order
-
-১৬. Order History
-
-Order List
-
-Card এ থাকবে
-
-Order Number
-
-Date
-
-Store
-
-Total Product
-
-Total Amount
-
-Status
-
-View Order
-
-১৭. Order Details
-
-এখানে থাকবে
-
-Order Timeline
-
+Store Pickup Flow
 Order Placed
+
+↓
 
 Confirmed
 
+↓
+
 Preparing
 
-Ready
+↓
 
+Ready for Pickup
 
-যদি Store Pickup
+↓
 
-Ready For Pickup
+Picked Up
 
-যদি Home Delivery
+↓
 
-Preparing For Delivery
+Completed
+Home Delivery Flow
+Order Placed
 
-Assigned To Delivery Person
+↓
 
-Out For Delivery
+Confirmed
+
+↓
+
+Preparing
+
+↓
+
+Ready for Delivery
+
+↓
+
+Assigned to Delivery Partner
+
+↓
+
+Out for Delivery
+
+↓
 
 Delivered
-Convert Pickup to Home Delivery
 
-যদি Pickup Order হয়
+প্রতিটি ধাপে থাকবে
 
-Button
+Status Title
+Date
+Time
+Completed Indicator
 
-Convert to Home Delivery
+উদাহরণ:
 
-Click করলে
+✓ Order Confirmed
+
+04 July
+
+10:25 AM
+২. Delivery Action Section
+
+এই অংশটি Delivery Type অনুযায়ী পরিবর্তিত হবে।
+
+যদি Store Pickup হয়
+
+Button থাকবে
+
+Request Home Delivery
+
+Button-এ ক্লিক করলে
+
+Delivery Address নির্বাচন
+Delivery Type নির্বাচন
+Payment Method (যদি অতিরিক্ত চার্জ থাকে)
+Confirm Request
+
+Shop Owner Request Accept করলে Timeline আপডেট হবে।
+
+Ready for Pickup-এর পরে নতুন Step যুক্ত হবে:
+
+Ready for Delivery
+
+↓
+
+Assigned to Delivery Partner
+
+↓
+
+Out for Delivery
+
+↓
+
+Delivered
+যদি Home Delivery হয়
+
+Button থাকবে
+
+Request Priority Delivery
+Change Delivery Schedule (যদি Allowed হয়)
+৩. Order Summary
+
+এখানে পুরো Order-এর সারাংশ থাকবে।
+
+Store Name
+Order Number
+Order Date
+Delivery Type
+Payment Method
+৪. Ordered Products
+
+প্রতিটি Product Card-এ থাকবে
+
+Product Image
+Product Name
+Variant
+Quantity
+Unit Price
+Total Price
+৫. Payment Summary
+
+এখানে দেখাবে
+
+Subtotal
+Discount
+Coupon Discount
+Bundle Discount
+Delivery Charge
+VAT (যদি থাকে)
+Total Payable Amount
+৬. Delivery Information
+
+যদি Home Delivery হয়
 
 Delivery Address
-
-↓
-
-Delivery Type
-
-↓
-
-Payment
-
-↓
-
-Confirm
-
-↓
-
-Delivery শুরু হবে
-
-১৮. Profile
-Personal Information
-Profile Photo
-Phone
-Email
-Saved Address
-Order History
-Favourite Shop
-Favourite Product
-Coupons
-Payment Methods
-Language
-Logout
-১৯. Offer Pages
-Bundle Offer
-
-Nearby Store অনুযায়ী Bundle
-
-Flash Offer
-
-Time Limited Offer
-
-Discount Offer
-
-Nearby Store-এর Discount
-
-২০. Search System
-
-Search করতে পারবে
-
-Store
-Product
-Pharmacy
-Restaurant
-Medicine
-Food
-
-Search Result-এ
-
-Store View
-
-এবং
-
-Product View
-
-দুইটি Tab থাকবে।
-
-২১. Location-Based Features
-
-সিস্টেমটি সম্পূর্ণ Location-Based হবে।
-
-প্রতিটি Store-এর ক্ষেত্রে দেখানো হবে:
-
-বর্তমান Location থেকে Distance
+Receiver Name
+Phone Number
 Estimated Delivery Time
-Delivery Charge
-Open / Closed Status
-Nearby Offers
-Nearby Bundle Offers
+
+যদি Store Pickup হয়
+
+Store Address
+Pickup Time
+Pickup Code / QR Code
+৭. Change Request
+
+এই Feature শুধুমাত্র নির্দিষ্ট Order Status পর্যন্ত Available থাকবে।
+
+কখন Change Request করা যাবে
+
+যদি Order Status থাকে
+
+Order Placed
+Confirmed
+Preparing
+
+তাহলে ব্যবহারকারী Request পাঠাতে পারবে।
+
+যখন আর Change করা যাবে না
+
+যদি Order Status হয়ে যায়
+
+Ready for Pickup
+Ready for Delivery
+Assigned to Delivery Partner
+Out for Delivery
+Delivered
+
+তাহলে Change Request Button Disabled থাকবে।
+
+সেখানে একটি Message দেখানো হবে:
+
+This order can no longer be modified because it has already entered the delivery stage.
+
+Change Request-এর মাধ্যমে ব্যবহারকারী পারবে
+Product Add Request
+Product Remove Request
+Quantity Increase
+Quantity Decrease
+Product Replace Request
+Note to Store
+
+Change Request Submit করলে
+
+Status দেখাবে
+
+Pending Approval
+Approved
+Rejected
+৮. Support Section
+
+পেজের নিচে থাকবে
+
+Contact Store
+Call Store
+Chat Support
+Download Invoice
+Report an Issue
+Reorder (Delivered Orders-এর জন্য)
+UX Guidelines
+Order Timeline সবসময় পেজের উপরে দৃশ্যমান থাকবে।
+বর্তমান (Current) Status স্পষ্টভাবে Highlight করা হবে।
+প্রতিটি Timeline Step-এর সাথে Date এবং Time প্রদর্শন করা হবে।
+Order Status অনুযায়ী Action Button স্বয়ংক্রিয়ভাবে পরিবর্তিত হবে।
+যেসব Action আর করা সম্ভব নয়, সেগুলো Disabled অবস্থায় থাকবে এবং কারণ দেখানো হবে।
+Track Order নির্বাচন করলে প্রয়োজনে একটি Live Map বা Delivery Tracking Screen-এ নিয়ে যাওয়া যেতে পারে।
+পুরো Order History Module Mobile এবং Desktop উভয় প্ল্যাটফর্মের জন্য Responsive এবং সহজে ব্যবহারযোগ্য (User-Friendly) হতে হবে।
