@@ -1,0 +1,763 @@
+১. Project Overview
+
+এটি একটি Location-Based Marketplace Platform, যেখানে ব্যবহারকারী তার বর্তমান লোকেশন অনুযায়ী আশেপাশের Normal Store, Pharmacy এবং Restaurant দেখতে, প্রোডাক্ট ব্রাউজ করতে এবং অর্ডার করতে পারবে।
+
+সিস্টেমের মূল উদ্দেশ্য হলো—
+
+Nearest Store Discover করা
+দ্রুত Product Search করা
+Store ও Product View এর মধ্যে সহজে Switch করা
+বিভিন্ন Delivery Option প্রদান করা
+Location অনুযায়ী Offer ও Bundle দেখানো
+২. Website Layout Structure
+
+ওয়েবসাইটের Layout নিচের ক্রম অনুযায়ী হবে।
+
+-----------------------------------------------------
+Top Header
+-----------------------------------------------------
+Sidebar
+-----------------------------------------------------
+Hero Slider
+-----------------------------------------------------
+Main Tab
+    Normal Store | Pharmacy | Restaurant
+-----------------------------------------------------
+Selected Section Content
+-----------------------------------------------------
+Offer Section
+-----------------------------------------------------
+Nearest Store Section
+-----------------------------------------------------
+Footer
+৩. Sidebar (Left Navigation)
+
+Sidebar পুরো Website-এর Primary Navigation হবে।
+
+Sidebar Menu
+Shop Category
+
+এখানে তিনটি Parent Category থাকবে।
+
+Shop Category
+
+▼ Normal Store
+
+▼ Pharmacy
+
+▼ Restaurant
+যদি Normal Store Expand করা হয়
+Normal Store
+
+• Grocery
+• Fruits
+• Vegetables
+• Stationery
+• Electronics
+• Gadgets
+• Fashion
+• Cosmetics
+• Multipurpose Store
+• Pet Shop
+• Gift Shop
+• Hardware
+Pharmacy Expand করলে
+Pharmacy
+
+• Medicine
+
+• Baby Care
+
+• Personal Care
+
+• Health Care
+
+• Medical Equipment
+
+• Perfume
+
+• Winter Care
+
+• Diabetic Care
+
+• Vitamins
+Restaurant Expand করলে
+Restaurant
+
+• Fast Food
+
+• Chinese
+
+• Cafe
+
+• Fine Dining
+
+• Cloud Kitchen
+
+• Cart & Van
+
+• Bakery
+
+• Dessert
+
+• Juice Bar
+Product Category
+
+Shop Category এর নিচে থাকবে Product Category।
+
+এখানে Multi-level Category থাকবে।
+
+উদাহরণ
+
+Product Category
+
+▼ Grocery
+
+Rice
+
+Oil
+
+Salt
+
+Milk
+
+Beverages
+
+▼ Electronics
+
+Phone
+
+Laptop
+
+Earbuds
+
+Smart Watch
+
+▼ Medicine
+
+Tablet
+
+Capsule
+
+Syrup
+
+Injection
+
+▼ Food
+
+Burger
+
+Pizza
+
+Chicken
+
+Coffee
+
+যে Category-তে ক্লিক করবে, সরাসরি সেই Category Page Open হবে।
+
+Additional Sidebar Menu
+
+এরপর থাকবে
+
+Favourite Shops
+Favourite Products
+Cart
+Bundle Offers
+Flash Offers
+Coupons
+Contact Support
+Language Switch (বাংলা / English)
+Profile Section
+
+যদি User Login করে থাকে
+
+তাহলে Sidebar এ থাকবে
+
+Profile
+Delivery Address
+Saved Address
+Order History
+Payment Methods
+Wishlist
+Notifications
+Logout
+
+যদি Login না করে থাকে
+
+তাহলে
+
+Login
+
+Register
+
+দেখাবে।
+
+৪. Top Header
+
+Header এ থাকবে
+
+Logo
+Search Bar
+Current Location
+Change Location
+Notifications
+Cart
+Login/Profile
+৫. Hero Section
+
+Hero Section পুরো Website-এর প্রথম Visual Area।
+
+এখানে থাকবে
+
+Auto Sliding Banner
+
+যেখানে দেখানো হবে
+
+Flash Sale
+Bundle Offer
+Festival Offer
+Free Delivery Campaign
+Nearby Shop Offer
+৬. Main Category Tabs
+
+Hero Slider এর নিচে থাকবে তিনটি বড় Tab
+
+Normal Store
+
+Pharmacy
+
+Restaurant
+
+Default হিসেবে থাকবে
+
+Normal Store
+
+৭. Normal Store Home
+
+Normal Store Select করলে Layout হবে
+
+Category Section
+
+Horizontal Scroll
+
+Grocery
+
+Fruit
+
+Stationery
+
+Electronics
+
+Fashion
+
+Gift Shop
+
+Pet Shop
+
+More...
+Product Category Section
+
+এর নিচে থাকবে
+
+Product Category Grid
+
+Bundle Offer
+
+Nearby Store এর Bundle Product
+
+Flash Offer
+
+Location Based Discount
+
+Browse Nearest Store
+
+Header
+
+Nearest Stores
+
+Browse All →
+
+এখানে Store Card থাকবে।
+
+Card এ থাকবে
+
+Cover Image
+Store Logo
+Store Name
+Rating
+Distance
+Delivery Charge
+Open / Closed
+Favourite Button
+Toggle View
+
+Browse Section এর উপরে থাকবে
+
+Store View
+
+Product View
+
+যদি Product View করা হয়
+
+তাহলে Nearby Store-এর Product গুলো
+
+Random
+
+অথবা
+
+Category Wise
+
+দেখাবে।
+
+৮. Pharmacy Home
+
+Pharmacy Tab এ গেলে
+
+Product Category
+Medicine
+Baby Care
+Personal Care
+Winter Care
+Health Care
+Medical Equipment
+Perfume
+Preferred Medicine
+
+একটি Section
+
+Select Your Preferred Medicine
+Prescription Upload
+
+Card থাকবে
+
+Upload Prescription
+
+Need Help?
+
+Button
+
+Call for Assistance
+
+যেখানে Customer Support Call করতে পারবে।
+
+Medicine List
+
+Category Wise Medicine
+
+Browse Nearest Pharmacy
+
+Store List
+
+Filter থাকবে
+
+Nearest
+Top Rated
+Favourite
+Toggle View
+
+Store View
+
+Product View
+
+৯. Restaurant Home
+
+Restaurant Select করলে
+
+Restaurant Type
+
+Horizontal Scroll
+
+Fast Food
+
+Chinese
+
+Cafe
+
+Bakery
+
+Cloud Kitchen
+
+Cart & Van
+
+Fine Dining
+Food Category
+
+Burger
+
+Pizza
+
+Rice
+
+Chicken
+
+Drinks
+
+Coffee
+
+Dessert
+
+Preferred Food
+
+"Select Your Preferred Food"
+
+Discount Food
+
+Discount Product
+
+Category Wise Food
+
+Product Grid
+
+Browse Nearest Restaurant
+
+Restaurant Card
+
+Toggle
+
+Restaurant View
+
+Food View
+
+১০. Browse All Store Page
+
+এটি Full Listing Page
+
+Top এ থাকবে
+
+Search
+
+তার নিচে Filter
+
+Nearest
+
+Top Rated
+
+Free Delivery
+
+Open Now
+
+Offers
+
+Distance
+
+Category
+
+Store Card
+
+দেখাবে
+
+Cover Image
+Favourite
+Store Logo
+Store Name
+Rating
+Review Count
+Location
+Distance
+Delivery Charge
+Free Delivery Tag
+Open / Closed
+১১. Store Details Page
+
+Store Click করলে
+
+Top
+
+Cover Photo
+
+তার নিচে
+
+Logo
+
+Store Name
+
+Rating
+
+Reviews
+
+Distance
+
+Location
+
+Open /Closed
+
+Delivery Charge
+
+Free Delivery
+
+Offer Section
+
+Special Offer
+
+Bundle Offer
+
+Flash Offer
+
+Category List
+
+Category Wise Products
+
+Shopping Button
+
+Shopping Mode
+
+এখানে Click করলে
+
+Quick Shopping Interface
+
+Open হবে।
+
+১২. Shopping Mode
+
+এটি শুধুমাত্র দ্রুত Shopping-এর জন্য।
+
+Layout
+
+Left
+
+Category
+
+Right
+
+Products
+
+Product Card
+
+Add to Cart Button
+
+Quantity Change
+
+Search
+
+১৩. Cart Page
+
+প্রতিটি Store আলাদা Section হিসেবে থাকবে।
+
+Store Card
+
+Logo
+Store Name
+Distance
+Delivery Charge
+
+Products
+
+Image
+
+Name
+
+Price
+
+Quantity
+
+Remove
+
+Order Summary
+
+Subtotal
+
+Discount
+
+Coupon
+
+Delivery Charge
+
+Total
+
+Delivery Option
+
+Home Delivery
+Standard Delivery
+Scheduled Delivery
+Emergency / Priority Delivery
+Store Pickup
+Instant Pickup
+Scheduled Pickup
+Standard Pickup
+
+Proceed
+
+১৪. Checkout Flow
+
+যদি Home Delivery হয়
+
+Delivery Method
+
+↓
+
+Select Address
+
+↓
+
+Payment
+
+↓
+
+Review Order
+
+↓
+
+Place Order
+
+যদি Store Pickup
+
+Delivery Method
+
+↓
+
+Payment
+
+↓
+
+Place Order
+
+১৫. Payment Page
+
+Payment Method
+
+bKash
+Card
+Cash on Delivery
+Wallet (Optional)
+
+যদি Store Pickup
+
+COD থাকবে না
+
+Direct Place Order
+
+১৬. Order History
+
+Order List
+
+Card এ থাকবে
+
+Order Number
+
+Date
+
+Store
+
+Total Product
+
+Total Amount
+
+Status
+
+View Order
+
+১৭. Order Details
+
+এখানে থাকবে
+
+Order Timeline
+
+Order Placed
+
+Confirmed
+
+Preparing
+
+Ready
+
+
+যদি Store Pickup
+
+Ready For Pickup
+
+যদি Home Delivery
+
+Preparing For Delivery
+
+Assigned To Delivery Person
+
+Out For Delivery
+
+Delivered
+Convert Pickup to Home Delivery
+
+যদি Pickup Order হয়
+
+Button
+
+Convert to Home Delivery
+
+Click করলে
+
+Delivery Address
+
+↓
+
+Delivery Type
+
+↓
+
+Payment
+
+↓
+
+Confirm
+
+↓
+
+Delivery শুরু হবে
+
+১৮. Profile
+Personal Information
+Profile Photo
+Phone
+Email
+Saved Address
+Order History
+Favourite Shop
+Favourite Product
+Coupons
+Payment Methods
+Language
+Logout
+১৯. Offer Pages
+Bundle Offer
+
+Nearby Store অনুযায়ী Bundle
+
+Flash Offer
+
+Time Limited Offer
+
+Discount Offer
+
+Nearby Store-এর Discount
+
+২০. Search System
+
+Search করতে পারবে
+
+Store
+Product
+Pharmacy
+Restaurant
+Medicine
+Food
+
+Search Result-এ
+
+Store View
+
+এবং
+
+Product View
+
+দুইটি Tab থাকবে।
+
+২১. Location-Based Features
+
+সিস্টেমটি সম্পূর্ণ Location-Based হবে।
+
+প্রতিটি Store-এর ক্ষেত্রে দেখানো হবে:
+
+বর্তমান Location থেকে Distance
+Estimated Delivery Time
+Delivery Charge
+Open / Closed Status
+Nearby Offers
+Nearby Bundle Offers
