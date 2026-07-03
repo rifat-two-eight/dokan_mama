@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function OrderDetails() {
   return (
     <div className="flex flex-col w-full min-h-screen bg-brand-background pb-24">
-      
+
       {/* Header */}
       <div className="sticky top-0 z-40 bg-white border-b border-gray-200 px-4 py-3 flex items-center gap-3">
         <Link href="/orders" className="p-2 -ml-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors">
@@ -17,18 +17,18 @@ export default function OrderDetails() {
       </div>
 
       <div className="px-4 md:px-8 py-4 space-y-6">
-        
+
         {/* Order Progress / Timeline */}
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
           <h2 className="font-bold text-gray-900 mb-4">Order Progress</h2>
           <div className="relative pl-6 space-y-6 border-l-2 border-brand-primary/30">
-            
+
             <div className="relative">
               <div className="absolute -left-[31px] top-1 w-4 h-4 bg-brand-primary rounded-full border-4 border-white"></div>
               <h3 className="font-bold text-gray-900 text-sm">Order Confirmed</h3>
               <p className="text-xs text-gray-500">06 July, 10:25 AM</p>
             </div>
-            
+
             <div className="relative">
               <div className="absolute -left-[31px] top-1 w-4 h-4 bg-brand-primary rounded-full border-4 border-white"></div>
               <h3 className="font-bold text-gray-900 text-sm">Preparing</h3>
@@ -114,9 +114,9 @@ export default function OrderDetails() {
             <div>
               <h3 className="font-bold text-gray-900 text-sm mb-1">Home Address</h3>
               <p className="text-sm text-gray-600 leading-relaxed mb-2">
-                House 12, Road 4, Block C, Banani<br/>Dhaka, Bangladesh
+                House 12, Road 4, Block C, Banani<br />Dhaka, Bangladesh
               </p>
-              <p className="text-sm font-semibold text-gray-800">Receiver: Rifat Doe</p>
+              <p className="text-sm font-semibold text-gray-800">Receiver: Rifat</p>
               <p className="text-sm text-gray-600">+880 1712-345678</p>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import HeroSlider from "./components/HeroSlider";
 import StoreCard from "./components/StoreCard";
 import ProductCard from "./components/ProductCard";
@@ -7,23 +8,23 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full min-h-screen bg-brand-background px-4 md:px-8 py-4 md:py-6">
       
-      {/* Category Tabs */}
-      <div className="flex items-center justify-center gap-6 md:gap-12 mb-6 border-b border-gray-200">
-        <button className="flex items-center gap-2 pb-3 border-b-2 border-brand-primary text-brand-primary font-bold transition-colors">
+      <HeroSlider />
+
+      {/* Main Service Tabs */}
+      <div className="flex items-center justify-center gap-4 md:gap-8 mt-6 mb-8 border-b border-gray-200 overflow-x-auto custom-scrollbar">
+        <Link href="/" className="flex items-center gap-2 pb-3 border-b-2 border-brand-primary text-brand-primary font-bold transition-colors whitespace-nowrap px-2">
           <Store className="w-5 h-5" />
-          <span className="text-sm md:text-base">Grocery</span>
-        </button>
-        <button className="flex items-center gap-2 pb-3 border-b-2 border-transparent text-gray-500 hover:text-gray-900 font-medium transition-colors">
+          <span className="text-sm md:text-base">Normal Store</span>
+        </Link>
+        <Link href="/pharmacy" className="flex items-center gap-2 pb-3 border-b-2 border-transparent text-gray-500 hover:text-gray-900 font-medium transition-colors whitespace-nowrap px-2">
           <Pill className="w-5 h-5" />
           <span className="text-sm md:text-base">Pharmacy</span>
-        </button>
-        <button className="flex items-center gap-2 pb-3 border-b-2 border-transparent text-gray-500 hover:text-gray-900 font-medium transition-colors">
+        </Link>
+        <Link href="/restaurant" className="flex items-center gap-2 pb-3 border-b-2 border-transparent text-gray-500 hover:text-gray-900 font-medium transition-colors whitespace-nowrap px-2">
           <UtensilsCrossed className="w-5 h-5" />
-          <span className="text-sm md:text-base">Cookupx</span>
-        </button>
+          <span className="text-sm md:text-base">Restaurant</span>
+        </Link>
       </div>
-
-      <HeroSlider />
 
       {/* Top Departments */}
       <section className="mb-8">

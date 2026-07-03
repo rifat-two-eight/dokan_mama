@@ -1,400 +1,68 @@
-২৫. Order History Module
+সংশোধিত Home Page – Main Tab Bar (Mobile View)
 Overview
 
-Order History Module-এর মাধ্যমে ব্যবহারকারী তার সকল অর্ডার দেখতে, সার্চ করতে, ফিল্টার করতে, ট্র্যাক করতে এবং প্রতিটি অর্ডারের বিস্তারিত তথ্য দেখতে পারবে। এছাড়াও নির্দিষ্ট শর্ত পূরণ হলে Delivery Method পরিবর্তন, Change Request এবং Order Tracking-এর মতো ফিচার ব্যবহার করতে পারবে।
+Hero Slider-এর ঠিক নিচে থাকবে Main Service Tabs, যেখানে ব্যবহারকারী তিনটি প্রধান সার্ভিসের মধ্যে সহজে পরিবর্তন (Switch) করতে পারবে।
 
-এই মডিউল মূলত দুইটি পেজ নিয়ে গঠিত:
+ডিফল্টভাবে Normal Store সিলেক্ট থাকবে।
 
-Order History Page (Order List)
-Order Details Page (View Order)
-১. Order History Page
-উদ্দেশ্য
-
-এই পেজে ব্যবহারকারীর সকল অর্ডার একটি Card/List আকারে প্রদর্শিত হবে। ব্যবহারকারী এখান থেকে অর্ডার সার্চ, ফিল্টার, ট্র্যাক এবং বিস্তারিত দেখতে পারবে।
-
-Page Layout
---------------------------------------------------
-Search Bar        Scan Order      Filter
---------------------------------------------------
-
-All | Running | In Progress | Delivered
-(Horizontal Scrollable Tabs)
-
---------------------------------------------------
-
-Order Card
-
-Order Card
-
-Order Card
-
-Order Card
-Top Section
-Search Bar
-
-ব্যবহারকারী নিচের তথ্য দিয়ে অর্ডার খুঁজতে পারবে।
-
-Order ID
-Store Name
-Product Name (Optional)
-Scan Order
-
-Search Bar-এর পাশে একটি QR/Barcode Scan আইকন থাকবে।
-
-এর মাধ্যমে ব্যবহারকারী
-
-Order QR Code Scan
-Invoice QR Scan
-Receipt QR Scan
-
-করেই সরাসরি Order Details Page-এ যেতে পারবে।
-
-Filter Button
-
-Filter-এ ক্লিক করলে একটি Bottom Sheet / Popup খুলবে।
-
-এখানে Filter করা যাবে:
-
-Date Range
-Today
-Yesterday
-Last 7 Days
-Last 30 Days
-Custom Date
-Order Amount
-Lowest Amount
-Highest Amount
-Custom Amount Range
-Delivery Type
-Home Delivery
-Store Pickup
-Payment Method
-Cash on Delivery
-bKash
-Card
-Wallet
-Store Type
-Normal Store
-Pharmacy
-Restaurant
-Order Status Tabs
-
-Search Section-এর নিচে Horizontal Scrollable Tabs থাকবে।
-
-All Orders
-Running Orders (New/Active)
-In Progress
-Ready for Pickup
-Out for Delivery
-Delivered
-Cancelled (Optional)
-
-প্রতিটি Tab নির্বাচন করলে শুধুমাত্র সেই Status-এর Order দেখাবে।
-
-Order List Card
-
-প্রতিটি Order একটি Card আকারে থাকবে।
-
-Card-এ নিম্নলিখিত তথ্য থাকবে:
-
-Order Image
-
-অর্ডারের প্রথম Product-এর Thumbnail অথবা একটি Order Thumbnail।
-
-Order Information
-Order ID
-Order Date & Time
-Store Name
-Total Products
-Total Amount
-
-উদাহরণ:
-
-Order ID: #ORD-10235
-
-Date: 05 July 2026
-
-Store:
-Fresh Grocery
-
-Items:
-8 Products
-
-Total:
-৳1,560
-Order Status Badge
-
-উদাহরণ:
-
-New Order
-Confirmed
-Preparing
-Ready for Pickup
-Out for Delivery
-Delivered
-Cancelled
-
-Status অনুযায়ী বিভিন্ন রঙ ব্যবহার করা হবে।
-
-Action Buttons
-যদি Order Delivered হয়ে যায়
-
-শুধুমাত্র থাকবে
-
-View Details
-যদি Order এখনো Active থাকে
-
-দুটি Button থাকবে
-
-View Details
-Track Order
-Order Details Page
-
-ব্যবহারকারী View Details অথবা Track Order-এ ক্লিক করলে এই পেজে যাবে।
-
-Page Layout
-Order Progress
+Main Tab Bar
+──────────────────────────────────────
+🏪 Normal Store | 💊 Pharmacy | 🍽️ Restaurant
+──────────────────────────────────────
+Tab Details
+🏪 Normal Store
+সকল সাধারণ দোকান (Grocery, Electronics, Fashion, Stationery, Fruits & Vegetables, Multipurpose Store ইত্যাদি) ব্রাউজ করার জন্য।
+ডিফল্টভাবে এই Tab Active থাকবে।
+💊 Pharmacy
+সকল Pharmacy Store, Medicine এবং Health Care Products ব্রাউজ করার জন্য।
+🍽️ Restaurant
+সকল Restaurant, Food Category এবং Food Items ব্রাউজ করার জন্য।
+Home Page Layout (Updated)
+Top App Bar
 
 ↓
 
-Delivery Action
+Hero Slider
 
 ↓
 
-Order Summary
+🏪 Normal Store | 💊 Pharmacy | 🍽️ Restaurant
 
 ↓
 
-Ordered Products
+Selected Tab Content
+
+(Normal Store / Pharmacy / Restaurant অনুযায়ী Content পরিবর্তিত হবে)
 
 ↓
 
-Payment Summary
+Offers
 
 ↓
 
-Delivery Information
+Nearest Stores / Restaurants / Pharmacies
 
 ↓
 
-Change Request
+Recommended Products
 
 ↓
 
-Support
-১. Order Progress Section
+Footer
+Design Note (Correction)
 
-পেজের একদম উপরে থাকবে Order Timeline।
+আগের ডকুমেন্টে Main Tab Bar-এ:
 
-এটি Step Progress আকারে হবে।
+❌ Grocery
+✅ Pharmacy
+❌ Cookapacks
 
-Store Pickup Flow
-Order Placed
+লেখা ছিল।
 
-↓
+এটি সংশোধন করে হবে:
 
-Confirmed
+✅ Normal Store
+✅ Pharmacy
+✅ Restaurant
 
-↓
-
-Preparing
-
-↓
-
-Ready for Pickup
-
-↓
-
-Picked Up
-
-↓
-
-Completed
-Home Delivery Flow
-Order Placed
-
-↓
-
-Confirmed
-
-↓
-
-Preparing
-
-↓
-
-Ready for Delivery
-
-↓
-
-Assigned to Delivery Partner
-
-↓
-
-Out for Delivery
-
-↓
-
-Delivered
-
-প্রতিটি ধাপে থাকবে
-
-Status Title
-Date
-Time
-Completed Indicator
-
-উদাহরণ:
-
-✓ Order Confirmed
-
-04 July
-
-10:25 AM
-২. Delivery Action Section
-
-এই অংশটি Delivery Type অনুযায়ী পরিবর্তিত হবে।
-
-যদি Store Pickup হয়
-
-Button থাকবে
-
-Request Home Delivery
-
-Button-এ ক্লিক করলে
-
-Delivery Address নির্বাচন
-Delivery Type নির্বাচন
-Payment Method (যদি অতিরিক্ত চার্জ থাকে)
-Confirm Request
-
-Shop Owner Request Accept করলে Timeline আপডেট হবে।
-
-Ready for Pickup-এর পরে নতুন Step যুক্ত হবে:
-
-Ready for Delivery
-
-↓
-
-Assigned to Delivery Partner
-
-↓
-
-Out for Delivery
-
-↓
-
-Delivered
-যদি Home Delivery হয়
-
-Button থাকবে
-
-Request Priority Delivery
-Change Delivery Schedule (যদি Allowed হয়)
-৩. Order Summary
-
-এখানে পুরো Order-এর সারাংশ থাকবে।
-
-Store Name
-Order Number
-Order Date
-Delivery Type
-Payment Method
-৪. Ordered Products
-
-প্রতিটি Product Card-এ থাকবে
-
-Product Image
-Product Name
-Variant
-Quantity
-Unit Price
-Total Price
-৫. Payment Summary
-
-এখানে দেখাবে
-
-Subtotal
-Discount
-Coupon Discount
-Bundle Discount
-Delivery Charge
-VAT (যদি থাকে)
-Total Payable Amount
-৬. Delivery Information
-
-যদি Home Delivery হয়
-
-Delivery Address
-Receiver Name
-Phone Number
-Estimated Delivery Time
-
-যদি Store Pickup হয়
-
-Store Address
-Pickup Time
-Pickup Code / QR Code
-৭. Change Request
-
-এই Feature শুধুমাত্র নির্দিষ্ট Order Status পর্যন্ত Available থাকবে।
-
-কখন Change Request করা যাবে
-
-যদি Order Status থাকে
-
-Order Placed
-Confirmed
-Preparing
-
-তাহলে ব্যবহারকারী Request পাঠাতে পারবে।
-
-যখন আর Change করা যাবে না
-
-যদি Order Status হয়ে যায়
-
-Ready for Pickup
-Ready for Delivery
-Assigned to Delivery Partner
-Out for Delivery
-Delivered
-
-তাহলে Change Request Button Disabled থাকবে।
-
-সেখানে একটি Message দেখানো হবে:
-
-This order can no longer be modified because it has already entered the delivery stage.
-
-Change Request-এর মাধ্যমে ব্যবহারকারী পারবে
-Product Add Request
-Product Remove Request
-Quantity Increase
-Quantity Decrease
-Product Replace Request
-Note to Store
-
-Change Request Submit করলে
-
-Status দেখাবে
-
-Pending Approval
-Approved
-Rejected
-৮. Support Section
-
-পেজের নিচে থাকবে
-
-Contact Store
-Call Store
-Chat Support
-Download Invoice
-Report an Issue
-Reorder (Delivered Orders-এর জন্য)
-UX Guidelines
-Order Timeline সবসময় পেজের উপরে দৃশ্যমান থাকবে।
-বর্তমান (Current) Status স্পষ্টভাবে Highlight করা হবে।
-প্রতিটি Timeline Step-এর সাথে Date এবং Time প্রদর্শন করা হবে।
-Order Status অনুযায়ী Action Button স্বয়ংক্রিয়ভাবে পরিবর্তিত হবে।
-যেসব Action আর করা সম্ভব নয়, সেগুলো Disabled অবস্থায় থাকবে এবং কারণ দেখানো হবে।
-Track Order নির্বাচন করলে প্রয়োজনে একটি Live Map বা Delivery Tracking Screen-এ নিয়ে যাওয়া যেতে পারে।
-পুরো Order History Module Mobile এবং Desktop উভয় প্ল্যাটফর্মের জন্য Responsive এবং সহজে ব্যবহারযোগ্য (User-Friendly) হতে হবে।
+নোট: এখানে Normal Store একটি সার্ভিস টাইপ (Service Tab), এটি কোনো Product Category নয়। Grocery, Electronics, Fashion, Stationery ইত্যাদি Normal Store-এর ভেতরের Category হিসেবে থাকবে। একইভাবে Restaurant একটি সার্ভিস টাইপ, যার ভেতরে বিভিন্ন Restaurant Category এবং Food Category থাকবে। এই তিনটি Tab-ই Home Page-এর মূল Navigation হিসেবে কাজ করবে।

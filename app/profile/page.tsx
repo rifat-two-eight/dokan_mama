@@ -11,14 +11,14 @@ export default function ProfilePage() {
           <User className="w-8 h-8" />
         </div>
         <div>
-          <h2 className="text-xl font-bold text-gray-900 mb-1">Rifat Doe</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-1">Rifat</h2>
           <p className="text-gray-500 text-sm mb-2">+880 1712-345678</p>
           <span className="inline-block px-2.5 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">GOLD MEMBER</span>
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
+
         {/* Menu Items */}
         <div className="md:col-span-2 space-y-4">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
@@ -36,7 +36,7 @@ export default function ProfilePage() {
             <div className="border-t border-gray-100"></div>
             <MenuRow icon={<Settings />} title="Settings" subtitle="App language and settings" />
           </div>
-          
+
           <button className="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-center gap-2 text-red-500 font-bold hover:bg-red-50 transition-colors">
             <LogOut className="w-5 h-5" />
             Log Out
